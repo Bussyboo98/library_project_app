@@ -1,0 +1,313 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Home
+{% endblock %}
+{% block content %}
+
+    <!-- Banner Start -->
+    <div class="container-fluid p-0 mb-5">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{% static 'img/LibraryLeftViewImage.jpg' %}" alt="Library Right View">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-8">
+                                <h5 class="text-uppercase mb-3 animated slideInDown" style="color: #d4af37">T.Y. DANJUMA LIBRARY</h5>
+                                <h1 class="display-3 text-white animated slideInDown">Discover Knowledge Beyond Boundaries</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">Embark on a Journey of Exploration, Learning, and Broadening Your Horizons with Our Abundant Collection of Resources.</p>
+                                <a href="{% url 'lib_app:about' %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft" style="background-color: #02075d; color: #ffffff;">Read More</a>
+                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{% static 'img/StuudentsInLibrary.jpg' %}" alt="Students in Library">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-8">
+                                <h5 class="text-uppercase mb-3 animated slideInDown" style="color: #d4af37;">T.Y. DANJUMA LIBRARY</h5>
+                                <h1 class="display-3 text-white animated slideInDown">Beyond Books</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">Embrace the Essence of Inquiry and Curiosity in an Atmosphere Devoted to Achieving Academic Excellence.</p>
+                                <a href="{% url 'lib_app:about' %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft" style="background-color: #02075d; color: #ffffff;">Read More</a>
+                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{% static 'img/LibraryPotterView.jpg' %}" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-8">
+                                <h5 class="text-uppercase mb-3 animated slideInDown" style="color: #d4af37;">T.Y. DANJUMA LIBRARY</h5>
+                                <h1 class="display-3 text-white animated slideInDown">Empowering Minds, Igniting Ideas</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">Explore, Learn, and Expand Your Horizons with Our Rich Collection of Resources.</p>
+                                <a href="{% url 'lib_app:about' %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft" style="background-color: #02075d; color: #ffffff;">Read More</a>
+                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{% static 'img/LibrarySideView.jpg' %}" alt="Library side view">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-8">
+                                <h5 class="text-uppercase mb-3 animated slideInDown" style="color: #d4af37;">T.Y. DANJUMA LIBRARY</h5>
+                                <h1 class="display-3 text-white animated slideInDown">A Sanctuary for Intellectual Exploration</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">Your Gateway to Academic Excellence Immerse Yourself in a Sea of Information and Ignite Your Curiosity.</p>
+                                <a href="{% url 'lib_app:about' %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft" style="background-color: #02075d; color: #ffffff;">Read More</a>
+                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{% static 'img/LibraryPotterView.jpg' %}" alt="Potter Desk in Library">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-8">
+                                <h5 class="text-uppercase mb-3 animated slideInDown" style="color: #d4af37;">T.Y. DANJUMA LIBRARY</h5>
+                                <h1 class="display-3 text-white animated slideInDown">Exploring Boundless Horizons of Learning</h1>
+                                <p class="fs-5 text-white mb-4 pb-2"> Fostering a Culture of Lifelong Learning - Imbibe the Spirit of Inquiry and Curiosity in an Environment Dedicated to Academic Success.</p>
+                                <a href="{% url 'lib_app:about' %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft" style="background-color: #02075d; color: #ffffff;">Read More</a>
+                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner End -->
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="{% static 'img/LibrarySideView.jpg' %}" alt="Library Side View" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
+                    <h1 class="mb-4">Welcome to T.Y.DANJUMA LIBRARY</h1>
+                    <p style="font-family: 'Klee One', sans-serif; font-size: 20px;" class="mb-4">The Library is the most important organ in any citadel of learning. 
+                        It serves as a support, not only to teaching but also to research and developmental activities. 
+                        The academic health, intellectual vitality, and effectiveness of any institution depend largely upon the state of health and excellence of its library. </p>
+                    <p style="font-family: 'Klee One', sans-serif; font-size: 20px;" class="mb-4">The library is the engine room and the powerhouse where information is collected, stored, processed, and retrieved for usage. 
+                        A visit to the library is a journey to discovery.</p>
+
+                    
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="{% url 'lib_app:about' %}" style="background-color: #02075d; color: #ffffff;">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Opening Hours Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">OPENING HOURS</h6>
+                <h1 class="mb-5">Hours of Operation</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/StuudentsInLibrary.jpg' %}" alt="Student in the Library">
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">Monday - Friday</h3>
+                            <h5 class="mb-4">8:00am - 8:00pm</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/LibraryPotterView.jpg' %}" alt="Potter Desk in Library">
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">Saturday</h3>
+                            <h5 class="mb-4">10:00am - 2:00pm</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/LibrarySideView.jpg' %}" alt="Potter Desk in Library">
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">Sunday</h3>
+                            <h5 class="mb-4">10:00am - 2:00pm</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Opening Hours End -->
+
+    <!-- Our service Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center">
+                    <h6 class="section-title bg-white text-center text-primary px-3">Our Service</h6>
+                    <h1 class="mb-5">Library Services</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item text-center pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fas fa-book mb-4" style="color: #02075d;"></i>
+                                <h5 class="mb-3">E-Library Services</h5>
+                                <b>
+                                    <p style="font-family: 'Klee One', sans-serif; font-size: 17px; color: black;">The library subscribed to general and specialized electronic databases. Users can access and 
+                                        download electronic information resources from these databases locally and remotely. The library subscribed to 
+                                        EBSCOhost, AGORA, ARDI, GOALI, HINARI, OARE, TEEAL, etc
+                                    </p>
+                                </b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item text-center pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fas fa-search mb-4" style="color: #02075d;"></i>
+                                <h5 class="mb-3">Bibliographic Searching</h5>
+                            <b>
+                                <p style="font-family: 'Klee One', sans-serif; font-size: 17px; color: black;">Staff of the Circulation and Reference section of the library renders assistance to users 
+                                    in searching for literature sources. They are assisted in browsing the shelves and 
+                                    packaging of information from the sources located.
+                                    Users receive support in navigating the shelves.
+                                    Users are provided assistance
+                                </p>
+                            </b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item text-center pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fas fa-hand-holding-usd mb-4" style="color: #02075d;"></i>
+                                <h5 class="mb-3">Loan Service</h5>
+                            <b>
+                                <p style="font-family: 'Klee One', sans-serif; font-size: 17px; color: black;">The service involves lending of books to library users. Users can renew borrowed books 
+                                    if they so desire, otherwise, borrowed books are expected to be returned at 
+                                    the expiration of the loan period. Journals and Reference materials are not conventionally 
+                                    given out on loan. They are supposed
+                                </p>
+                            </b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="service-item text-center pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x far fa-copy mb-4" style="color: #02075d;"></i>
+                                <h5 class="mb-3">Photocopying Service</h5>
+                            <b>
+                                <p style="font-family: 'Klee One', sans-serif; font-size: 17px; color: black;">The Service is available to users, so as to preserve library materials particularly 
+                                    those not given out on loan. Users can make copies of needed pages from books, 
+                                    journals and reference materials from the library shelves. This service is rendered at cost.
+                                    Users are provided assistance
+                                </p>
+                            </b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
+                <h1 class="mb-5">Our Students Say!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel position-relative">
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="{% static 'img/Esther image.jpg' %}" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Adeniyi Esther Abosede</h5>
+                    <p>Computer Science</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">The T.Y. Danjuma Library's electronic databases and helpful staff have been crucial for my computer science studies. 
+                        Access to resources like EBSCOhost and TEEAL, combined with expert assistance, has enhanced my learning experience.
+                    </p>
+                    </div>
+                </div>
+                <!-- <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="{% static 'img/busayo image.jpg' %}" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Ogungbure Busayo</h5>
+                    <p>Law</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">The Justice Babasola Ogunade Law Library provides a focused environment for law studies. 
+                        The T.Y. Danjuma Library's commitment to security, well-equipped facilities, and an extensive legal collection has significantly contributed to my academic success.
+                    </p>
+                    </div>
+                </div> -->
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="{% static 'img/dotun image.jpeg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Ekundayo Temidotun</h5>
+                    <p>Biological Sciences</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">As a biological sciences researcher, the T.Y. Danjuma Library's vast collection, including specialized databases like AGORA and OARE, has been invaluable. 
+                        The ongoing automation using KOHA streamlines resource management and supports efficient research.
+                    </p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="{% static 'img/Simi Image.jpg' %}" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Sola-oginni Tetisimi</h5>
+                    <p>Business Administration</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">The T.Y. Danjuma Library has been a cornerstone in my business administration studies. 
+                        User-friendly services, book lending, and cost-effective copying options have made my academic journey more manageable. 
+                        The library's integration of electronic facilities ensures seamless access to online resources.
+                    </p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="{% static 'img/juwon image.jpg' %}" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Akosile Juwon</h5>
+                    <p>Business Science</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">The T.Y. Danjuma Library has been a cornerstone in my business administration studies. 
+                        User-friendly services, book lending, and cost-effective copying options have made my academic journey more manageable. 
+                        The library's integration of electronic facilities ensures seamless access to online resources.
+                    </p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="{% static 'img/Precious Image.jpg' %}" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Oyebanjo Precious</h5>
+                    <p>Business Finance</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                        <p class="mb-0">The T.Y. Danjuma Library has been a cornerstone in my business administration studies. User-friendly services, book lending, and 
+                            cost-effective copying options have made my academic journey more manageable. The library's integration of electronic 
+                            facilities ensures seamless access to online resources.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+        
+    {% endblock %}

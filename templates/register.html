@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Register
+{% endblock %}
+{% block content %}
+
+
+
+
+<div class="shadow p-3 mb-5 bg-white rounded container mt-3 ">
+  <h3 class="text-bg-primary text-center ">REGISTER</h3>
+  <form method="post" class="form w-75 m-auto ">
+    {% if messages %}
+    {% for mes in messages %}
+    <div class="alert alert-success  ">{{mes}}</div>
+    {% endfor %}
+    {% endif %}
+    {% csrf_token %}
+    <label for="fname">Username</label>
+    {{form.user_name}}
+
+    <label for="fname">Fullname</label>
+    {{form.name}}
+
+    <label for="lname">Matric</label>
+    {{form.matric_number}}
+
+    <label for="lname">Department</label>
+    {{form.department}}
+
+    <label for="lname">Email</label>
+   {{form.email}}
+
+    <label for="lname">Email</label>
+   {{form.gender}}
+    
+    <label for="lname">Password</label>
+    {{form.password1}}
+    <label for="lname">Confirm Password</label>
+    {{form.password2}}
+    <input type="submit" class="btn btn-outline-success text-dark mt-2 w-100  " value="Register">
+    <p>Already have an account <a href="{% url 'lib_app:login' %}">Sign In</a></p>
+  </form>
+</div>
+</div>
+
+
+
+{% endblock %}

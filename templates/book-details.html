@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+{{book.book_title}}
+{% endblock %}
+{% block content %}
+<div class="container-fluid p-0 mb-5">
+    <div class="owl-carousel header-carousel position-relative " >
+       
+        <div class="owl-carousel-item position-relative" style="height: 400px;">
+            <img class="img-fluid w-100" src="{{book.book_image.url}}"  alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-sm-10 col-lg-8">
+                    
+                            <h2 class="display-3 text-white animated slideInDown">{{book.book_title}}</h2>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        
+    </div>
+</div>
+<!-- Courses Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            {% if book %}
+            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="course-item" style="height: 100%;">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid" style="width: 100%;" src="{{ book.book_image.url }}" alt="Williams Shakespeare - Book 1">
+                    </div>
+                    <div class="mt-2">
+                        <h5><i class="fa fa-user-tie text-primary me-2"></i> Author: {{ book.author }}</h5>
+                        <h5><i class="fa fa-clock text-primary me-2"></i> Publication Year: {{ book.publication_year }} </h5>
+                        <h5><i class="fa fa-book text-primary me-2"></i> Total Copies: {{ book.total_copies }} </h5>
+                        <h5><i class="fa fa-book text-primary me-2"></i> Available Copies: {{ book.available_copies }} </h5>
+                        <h5><i class="fa fa-book text-primary me-2"></i> ISBN: {{ book.ISBN }} </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="text-center p-4 pb-0">
+                    <h2 class="mb-4">{{ book.book_title }}</h2>
+                    <p>{{ book.description|safe }}</p>
+                </div>
+                {% if not user.is_authenticated %}
+                <a href="{% url 'lib_app:login' %}?next={% url 'lib_app:borrow_book' slug=book.slug  %}">
+                    <button class="btn btn-warning m-auto w-100">Borrow Book</button>
+                </a>
+                {% else %}
+                <a href="{% url 'lib_app:borrow_book' slug=book.slug %}">
+                    <button class="btn btn-success m-auto w-100" {% if already_borrowed %}disabled{% endif %}>
+                        {% if already_borrowed %}
+                            Borrowed
+                        {% else %}
+                            Borrow Book
+                        {% endif %}
+                    </button>
+                </a>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<!-- Courses End -->
+
+
+{% endblock %}

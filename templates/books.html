@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Books
+{% endblock %}
+{% block content %}
+
+   
+
+    <!-- Courses Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+
+            <div class="row g-4 justify-content-center">
+                {% if books %}
+                {% for b in books %}
+                
+                    <div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="course-item bg-light" style="height: 100%;">
+                                <div class="position-relative overflow-hidden" >
+                                    <a href="{% url 'lib_app:book_detail' b.slug %}"> 
+                                        <img class="img-fluid" style="width: 100%;" src="{{b.book_image.url}}" alt="{{b.book_title}}">
+                                    </a>
+                                </div>
+        
+                                <div class="text-center p-4 pb-0">
+                                    <h5 class="mb-4"><a href="{% url 'lib_app:book_detail' b.slug %}">{{b.book_title}}</a></h5>
+                                   
+                                </div>
+        
+                                <div class="d-flex border-top">
+                                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>{{b.author}}</small>
+                                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>{{b.publication_year}}</small>
+                                    <small class="flex-fill text-center py-2"><i class="fa fa-book text-primary me-2"></i>{{b.total_copies}} Books</small>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+             
+                {% endfor %}
+                {% endif%}
+                
+
+            </div>
+        </div>
+    </div>
+    <!-- Courses End -->
+{% endblock %}

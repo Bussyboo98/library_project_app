@@ -1,0 +1,206 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+About
+{% endblock %}
+{% block content %}
+<div class="container-fluid p-0 mb-5">
+    <div class="owl-carousel header-carousel position-relative">
+       
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="{% static 'img/LibraryPotterView.jpg' %}" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-sm-10 col-lg-8">
+                            <h5 class="text-uppercase mb-3 animated slideInDown" style="color: #d4af37;">T.Y. DANJUMA LIBRARY</h5>
+                            <h1 class="display-3 text-white animated slideInDown">Empowering Minds, Igniting Ideas</h1>
+                            <p class="fs-5 text-white mb-4 pb-2">Explore, Learn, and Expand Your Horizons with Our Rich Collection of Resources.</p>
+                            <a href="{% url 'lib_app:about' %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft" style="background-color: #02075d; color: #ffffff;">Read More</a>
+                            <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="{% static 'img/LibrarySideView.jpg' %}" alt="Library side view">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-sm-10 col-lg-8">
+                            <h5 class="text-uppercase mb-3 animated slideInDown" style="color: #d4af37;">T.Y. DANJUMA LIBRARY</h5>
+                            <h1 class="display-3 text-white animated slideInDown">A Sanctuary for Intellectual Exploration</h1>
+                            <p class="fs-5 text-white mb-4 pb-2">Your Gateway to Academic Excellence Immerse Yourself in a Sea of Information and Ignite Your Curiosity.</p>
+                            <a href="{% url 'lib_app:about' %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft" style="background-color: #02075d; color: #ffffff;">Read More</a>
+                            <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+</div>
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-50 w-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="{% static 'img/LibraryLeftViewImage.jpg' %}" alt="Library Side View" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div id="About us" class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
+                    <h1 class="mb-4">Welcome to T.Y.DANJUMA LIBRARY</h1>
+                    <p style="font-family: 'Klee One', sans-serif; font-size: 20px;" class="mb-4">
+                        The Library is the most important organ in any citadel of learning. It serves as a support, not only to teaching but also to research and developmental activities. 
+                        The academic health, intellectual vitality, and effectiveness of any institution depend largely upon the state of health and excellence of its library. 
+                        The library is the engine room and the powerhouse where information is collected, stored, processed, and retrieved for usage. A visit to the library is a journey to discovery.
+                    </p>
+                    <p style="font-family: 'Klee One', sans-serif; font-size: 20px;" class="mb-4">
+                        The Library in Ajayi Crowther University Library is known as T.Y. Danjuma Library. 
+                        It was constructed and donated by Rtd. Gen. Theophilus. Y. Danjuma in the year 2010. 
+                        The Library which assumes the hub of academic activities is an edifice with three floors including the ground floor. 
+                        It is centrally located to serve the information needs of the students, faculties, staff and researchers across board with its up-to-date stock of information-bearing resources in all formats. 
+                        The Library was constructed with a clear vision of the future in mind for expansion. It has three floors but currently using the ground floor and the middle floors. 
+                        It is indeed a great facility for a good academic library in the 21st century for its architectural masterpiece.
+                    </p>
+                    <p style="font-family: 'Klee One', sans-serif; font-size: 20px;" class="mb-4">
+                        The Library has two divisions: Technical and Readers Services divisions. 
+                        The Library has another branch, which is known as Justice Babasola Ogunade Law Library. 
+                        It is located at the Faculty of Law. The entire Library system has a total of 32 staff members, both professionals and para-professionals. 
+                        Automation of the Library is ongoing using KOHA, an Integrated Library Management Software. 
+                        The Library has electronic facilities that are connected to the internet, which makes it possible for users to access online resources.
+                    </p>
+                    <p style="font-family: 'Klee One', sans-serif; font-size: 20px;" class="mb-4">
+                        The Library provides a comprehensive information service to serve the need of teaching, learning and research. 
+                        The Library is well equipped and stocked with a large volume of over 25,000 books and 3,000 journals/periodicals with 2,000 seating capacity. 
+                        The library subscribes to numerous electronic resources to complement the print resources. The security of users’ belongings is guaranteed. 
+                        The Library provides cloak areas made up of 80 cabinets with locks where library users can keep their valuables.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- About our Librarian -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-sm-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-50" src="{% static 'img/librarian_picturebg.png' %}" alt="Librarian Image" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div id="Our Librarian" class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-start text-primary pe-3">Our Librarian</h6>
+                    <h1 class="mb-4">From the Librarian Desk</h1>
+                    <p style="font-family: 'Klee One', sans-serif; font-size: 20px;" class="mb-4">
+                        The Library is the most important organ in any citadel of learning. It serves as a support, not only to teaching but also to research and developmental activities. 
+                        The academic health, intellectual vitality, and effectiveness of any institution depend largely upon the state of health and excellence of its library.
+                    </p>
+                    <p style="font-family: 'Klee One', sans-serif; font-size: 20px;" class="mb-4">
+                        The library is the engine room and the powerhouse where information is collected, stored, processed, and retrieved for usage. 
+                        A visit to the library is a journey to discovery. Academic development is seriously dependent on the quality of the Library. 
+                        In Ajayi Crowther University, we can boast of a Building that is imposing and that, for years to come, will be most suitable 
+                        and adequate for all forms of expansion that are bound to take place as the University grows in number of academic programmes, staff, and students. 
+                        Presently our Library can sit 1,500 users conveniently. 
+                    </p>
+                    <p style="font-family: 'Klee One', sans-serif; font-size: 20px;" class="mb-4">
+                        The book holdings in the Library have also increased from 3,000 in 2007 to over 20,000. 
+                        The Virtual Library, a critical tool of research in these modern times is an important feature of the T.Y. Danjuma Library. 
+                        The Library is a big asset to the University and the University will not relent in making it one of the best university libraries in the country in terms of facilities and services. 
+                        Every User of the Library; be it Student, Staff, Researcher, etc., is expected to register and obtain a pass and an Identity Card which authorize access to library resources and services
+                    </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div id="Our Staffs" class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Our Staffs</h6>
+                <h1 class="mb-5">Staff Profile</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/librarian_picturebg.png' %}" alt="The Librarian Picture">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Dr. Fabunmi, B. A.</h5>
+                            <small>University Librarian</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/fasola_library bg.png' %}" alt="Fasola Image">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Fasola, O. S.</h5>
+                            <small>Principa Librarian</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/oso_librarybg.png' %}" alt="Oso Image">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Oso, O. O.</h5>
+                            <small>Senior Librarian</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/bamgbose_library bg.png' %}" alt="Bamgbose Image">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Bamgbose, O. J.</h5>
+                            <small>Senior Librarian</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+        
+{% endblock %}

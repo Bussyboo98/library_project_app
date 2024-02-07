@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Borrow Book Details
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="mb-4">Borrow Book</h2>
+           <h4 class="text-center " > You are currently borrowing the book titled: <span class="text-center text-capitalize "><u>{{ book.book_title }}.</u></span></h4>
+            <form method="post" class="form">
+                <label for="name">Borrow Date</label>
+                {{form.borrowed_date}}
+                <label for="name">Borrow Date</label>
+                {{form.returned_date}}
+                <label for="name">Borrower Name</label>
+                <input type="text" class="form-control" readonly placeholder="{{request.user.name}}" name="" id="">
+                <label for="name">Borrower Email</label>
+                <input type="text" class="form-control" readonly placeholder="{{request.user.email}}" name="" id="">
+                {{form.reason_for_borrowing}}
+                {% csrf_token %}
+                <button type="submit " class="btn btn-success  w-100 mt-3 m-auto ">Confirm Borrow</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
