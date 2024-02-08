@@ -11,7 +11,6 @@ urlpatterns = [
     path('register/', views.register_view, name='register'),
     path('login/', views.login_view, name='login'),
     path('dashboard/', views.dashboard, name='dashboard'),
-    # path('borrow/<slug:slug>/', borrow_details, name='borrow_details'),
     path('borrow_book/<slug:slug>/', views.borrow_book, name='borrow_book'),
     path('return_book/<int:borrowing_id>/', return_book, name='return_book'),
     path('borrow-success/', views.borrow_success, name='borrow_success'),

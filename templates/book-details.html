@@ -55,7 +55,7 @@
                 </a>
                 {% else %}
                 <a href="{% url 'lib_app:borrow_book' slug=book.slug %}">
-                    <button class="btn btn-success m-auto w-100" {% if already_borrowed %}disabled{% endif %}>
+                    <button class="btn btn-primary  m-auto w-100" {% if already_borrowed %}disabled{% endif %}>
                         {% if already_borrowed %}
                             Borrowed
                         {% else %}

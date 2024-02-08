@@ -75,5 +75,6 @@ class BorrowingForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(BorrowingForm, self).__init__(*args, **kwargs)
         # Customize form fields here if needed
-        self.fields['borrowed_date'].widget = forms.DateInput(attrs={'type': 'date','class': 'form-control',})  # Example: Change widget to date input
-        self.fields['returned_date'].widget = forms.DateInput(attrs={'type': 'date','class': 'form-control',})  # Example: Change widget to date input
+        self.fields['borrowed_date'].widget = forms.DateInput(attrs={'type': 'date','class': 'form-control',})  
+        self.fields['returned_date'].widget = forms.DateInput(attrs={'type': 'date','class': 'form-control',})  
+        self.fields['reason_for_borrowing'].widget = forms.Textarea(attrs={'class': 'form-control',})  

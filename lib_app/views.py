@@ -86,7 +86,7 @@ def borrow_book(request, slug):
             book.available_copies -= 1
             book.save()
             print("Borrowing successful!")
-            return redirect('lib_app:borrow_success')  # Redirect to a success page or wherever you like
+            return redirect('lib_app:borrow_success')
         else:
             print("Form is not valid:", form.errors)
     else:
@@ -97,24 +97,38 @@ def borrow_book(request, slug):
 def borrow_success(request):
     return render(request, 'borrow-success.html')
 
+
+def borrowed_books(request):
+    # Get borrowed books that are not yet returned
+    borrowed_books = Borrowing.objects.filter(borrower=request.user, is_borrowed=True, is_returned=False)
+
+    # Update is_borrowed to False for returned books
+    returned_books = Borrowing.objects.filter(borrower=request.user, is_borrowed=True, is_returned=True)
+    for book in returned_books:
+        book.is_borrowed = False
+        book.save()
+
+    return render(request, 'backend/borrowed-books.html', {'borrowed_books': borrowed_books})
+
+
 def return_book(request, borrowing_id):
     borrowing = get_object_or_404(Borrowing, pk=borrowing_id, borrower=request.user, is_borrowed=True)
 
     if borrowing.is_returned:
         messages.warning(request, f"This book has already been returned.")
     else:
-        # Set is_returned to True
+        # Set is_returned to True and is_borrowed to False
         borrowing.is_returned = True
+        borrowing.is_borrowed = False
         borrowing.save()
+
+        # Update available copies of the book
+        borrowing.book.available_copies += 1
+        borrowing.book.save()
 
         messages.success(request, f"You have successfully returned '{borrowing.book.book_title}'.")
 
-    # Redirect to the page where the user borrowed the book
     return redirect('lib_app:borrowed_books')
-
-def borrowed_books(request):
-    borrowed_books = Borrowing.objects.filter(borrower=request.user, is_borrowed=True)
-    return render(request, 'backend/borrowed-books.html', {'borrowed_books': borrowed_books})
 
 
 # @login_required(login_url='/login/')

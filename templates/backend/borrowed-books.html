@@ -19,15 +19,19 @@ Dashboard - Borrowed Books
                   <img src="{{ borrowing.book.book_image.url }}" class="img-fluid" alt="">
                 </div>
                 <h5 class="card-title">{{ borrowing.book.book_title }}</h5>
-                <a href="{% url 'lib_app:return_book' borrowing_id=borrowing.id %}" class="btn btn-success">Return Book</a>
-
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                  Launch demo modal
+                </button>
+               
               </div>
             </div>
           </div>
         {% endfor %}
       {% else %}
-        <div class="col-12">
-          <p style="font-weight: 800; font-size: 25px;">You haven't borrowed any books yet.</p>
+        <div class="col-12 text-center ">
+          <p style="font-weight: 800; font-size: 25px;" class="text-center mt-3 ">You haven't borrowed any books yet.</p>
+          <img src="https://img.freepik.com/free-vector/hand-drawn-no-data-concept_52683-127823.jpg?size=626&ext=jpg&ga=GA1.1.765897799.1696458149&semt=ais" class="img-fluid w-50 " alt="">
+         <br> <a href="{% url 'lib_app:book_list' %}"><button class="btn btn-primary  mt-2">Borrow Now</button></a>
         </div>
       {% endif %}
     </div>
@@ -42,5 +46,28 @@ Dashboard - Borrowed Books
   </footer>
   <!-- partial -->
 </div>
-
+{% if borrowed_books %}
+        {% for borrowing in borrowed_books %}
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Return {{ borrowing.book.book_title }}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <h4>{{request.user.name}}, Are you sure you want to return this book, <span class="text-primary ">{{ borrowing.book.book_title }}</span>?</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="{% url 'lib_app:return_book' borrowing_id=borrowing.id %}" class="btn btn-success">Yes, Return Book</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endif %}
 {% endblock %}

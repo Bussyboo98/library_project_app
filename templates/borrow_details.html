@@ -20,6 +20,7 @@ Borrow Book Details
                 <input type="text" class="form-control" readonly placeholder="{{request.user.name}}" name="" id="">
                 <label for="name">Borrower Email</label>
                 <input type="text" class="form-control" readonly placeholder="{{request.user.email}}" name="" id="">
+                <label for="name">State Reason for Borrowinge</label>
                 {{form.reason_for_borrowing}}
                 {% csrf_token %}
                 <button type="submit " class="btn btn-success  w-100 mt-3 m-auto ">Confirm Borrow</button>
